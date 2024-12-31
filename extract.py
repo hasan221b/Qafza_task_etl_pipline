@@ -30,6 +30,10 @@ def getvidData(vidID):
 
     response = requests.get(url, headers=headers, params=querystring)
     textTojson = json.loads(response.text)
+    if 'items' not in textTojson:
+        print("Key 'items' not found in the response.")
+        return []
+
     for i in textTojson['items']:
         comments.append(i['contentText'])
     return comments

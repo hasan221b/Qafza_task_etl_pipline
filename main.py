@@ -45,9 +45,13 @@ print(data)
 
 save_channel_list(file_path,channel_ids)
 
+print(channels_ids)
 #current_dir = os.path.dirname(os.path.abspath(__file__))
 
 #dfile_path = os.path.join(current_dir, "dataset.csv")
 dfile_path = "dataset.csv"
 
 data.to_csv(dfile_path, mode='a', header=False, index=False)
+
+x = pd.read_csv("dataset.csv")
+print(x)

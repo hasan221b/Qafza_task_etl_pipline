@@ -45,7 +45,7 @@ print(data)
 
 save_channel_list(file_path,channel_ids)
 
-print(channels_ids)
+print(channel_ids)
 #current_dir = os.path.dirname(os.path.abspath(__file__))
 
 #dfile_path = os.path.join(current_dir, "dataset.csv")

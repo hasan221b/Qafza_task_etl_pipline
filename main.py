@@ -10,10 +10,11 @@ from manage_id import *
 
 #channel_ids = load_channel_ids(file_path)
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
+#current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Build the file path relative to the script's directory
-file_path = os.path.join(current_dir, "channels_ids.json")
+#file_path = os.path.join(current_dir, "channels_ids.json")
+file_path = "channels_ids.json"
 
 # Load the JSON file
 channel_ids = load_channel_ids(file_path)
@@ -44,8 +45,9 @@ print(data)
 
 save_channel_list(file_path,channel_ids)
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
+#current_dir = os.path.dirname(os.path.abspath(__file__))
 
-dfile_path = os.path.join(current_dir, "dataset.csv")
+#dfile_path = os.path.join(current_dir, "dataset.csv")
+dfile_path = "dataset.csv"
 
 data.to_csv(dfile_path, mode='a', header=False, index=False)

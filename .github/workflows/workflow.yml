@@ -31,11 +31,13 @@ jobs:
       - name: Run script
         run: python main.py
       
-      
+            
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add dataset.csv
           git commit -m "Update dataset.csv via GitHub Actions" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/hasan221b/Qafza_task_etl_pipline.git
+          git push origin HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
